@@ -1,0 +1,17 @@
+name: ZetraAdmin
+version: '1.3.0'
+main: me.zetra.zetraadmin.ZetraAdmin
+api-version: '1.21'
+depend: [Essentials]
+softdepend: [LuckPerms, floodgate]
+commands:
+  adm:
+    description: Comando central de administracao do ZetraAdmin.
+    usage: /adm <subcomando>
+permissions:
+  zetraAdmin.admin:
+    default: op
+  zetraAdmin.ban:
+    default: op
+  zetraAdmin.mute:
+    default: op

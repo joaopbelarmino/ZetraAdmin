@@ -1,0 +1,42 @@
+panel-sync:
+  enabled: false
+  endpoint: "https://painel.zetramc.online/api/minecraft-sync"
+  api-token: ""
+  server-id: "semi-anarquia"
+  interval-seconds: 5
+  # Reconcilia todos os bans ativos do MySQL do painel. Falhas nunca limpam o banco local.
+  full-sync-seconds: 60
+  timeout-ms: 5000
+  batch-size: 50
+
+ban-message:
+  title: "&5&lVoce foi banido do ZetraMC"
+  support: "&fCaso queira recorrer ou verificar a possibilidade de comprar um unban, acesse: &d&lsuporte.zetramc.online"
+
+legacy-ban-migration:
+  # Ative somente para uma migracao controlada e volte para false depois.
+  enabled: false
+
+compatibility:
+  # Remove apenas o ban exato deste UUID/nick no Bukkit/Essentials durante o unban.
+  clear-legacy-ban-on-unban: true
+
+analytics:
+  enabled: true
+  timezone: "America/Sao_Paulo"
+  min-session-seconds: 30
+  ccu-snapshot-minutes: 5
+  track-commands:
+    enabled: true
+    whitelist:
+      - "spawn"
+      - "mercado"
+      - "ah"
+      - "clan"
+      - "daily"
+      - "loginbonus"
+      - "missions"
+  command-events:
+    daily: "daily_open"
+    loginbonus: "daily_open"
+    missions: "missions_open"
